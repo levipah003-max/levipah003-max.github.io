@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Bangun Nusa Bangsa - Cibinong</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar Informasi -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-info">
+                <span><i class="fas fa-map-marker-alt"></i>Jl. Roda Pembangunan No.45, Karadenan, Cibinong</span>
+                <span><i class="fas fa-phone-alt"></i>(0251) 7555982</span>
+                <span><i class="fas fa-envelope"></i>smkbnb13@gmail.com</span>
+            </div>
+            <div>
+                <span class="badge-accreditation">Terakreditasi "A"</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <div class="logo-box">BNB</div>
+                <div class="logo-text">
+                    <strong>SMK BANGUN NUSA BANGSA</strong>
+                    <span>Cibinong - Kabupaten Bogor</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#beranda" class="active">Beranda</a>
+                <a href="#profil">Profil</a>
+                <a href="#jurusan">Kompetensi Keahlian</a>
+                <a href="#fasilitas">Fasilitas & Kegiatan</a>
+                <a href="#kontak">Kontak</a>
+                <button onclick="openModal()" class="btn btn-gold">Daftar PPDB</button>
+            </nav>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Buka Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=80" 
+             alt="Suasana Belajar SMK Bangun Nusa Bangsa" class="hero-bg">
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Terakreditasi "A" (Nilai 94) • Sekolah Kejuruan Unggulan</span>
+                </div>
+                <h1>Mencetak Generasi <span>Siap Kerja</span>, Kompeten & Berkarakter</h1>
+                <p>SMK Bangun Nusa Bangsa Cibinong membekali peserta didik dengan penguasaan teknologi terkini, keterampilan industri (hard skill), dan pembinaan akhlak mulia.</p>
+                <div class="hero-actions">
+                    <button onclick="openModal()" class="btn btn-gold">
+                        Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <a href="#jurusan" class="btn btn-outline-white">Lihat Jurusan</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-card-img">
+                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80" alt="Praktik Kejuruan Siswa">
+                    <span class="hero-card-tag">Pembinaan Vokasi & Karakter</span>
+                </div>
+                <div class="hero-card-body">
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <strong style="font-size: 1.8rem; color: #fff; display: block;">3</strong>
+                            <span style="font-size: 0.78rem; color: #D1D5DB;">Program Keahlian Terfavorit</span>
+                        </div>
+                        <div class="stat-box">
+                            <strong style="font-size: 1.8rem; color: var(--gold); display: block;">A</strong>
+                            <span style="font-size: 0.78rem; color: #D1D5DB;">Peringkat Akreditasi Nasional</span>
+                        </div>
+                    </div>
+                    <div class="stat-box" style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-clock" style="color: var(--gold); font-size: 1.25rem;"></i>
+                        <div style="font-size: 0.8rem; color: #D1D5DB;">
+                            <strong style="color: #fff; display: block;">Jam Operasional Sekolah</strong>
+                            <span>Senin - Jumat: 07.00 - 17.00 WIB | Sabtu: 07.00 - 14.00 WIB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami (Selayang Pandang) -->
+    <section id="profil" class="section bg-light">
+        <div class="container grid-2">
+            <div>
+                <span class="section-subtitle">Selayang Pandang</span>
+                <h2 class="section-title">Pendidikan Vokasi Modern dengan Fondasi Karakter Kuat</h2>
+                <p class="section-desc">
+                    Berlokasi strategis di Karadenan, Cibinong, <strong>SMK Bangun Nusa Bangsa (SMK BNB)</strong> hadir menjawab tantangan dunia industri dan perkantoran modern dengan memadukan praktik kejuruan serta pembentukan akhlak mulia.
+                </p>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div>
+                            <h4>Penguasaan Teknologi Informasi</h4>
+                            <p>Seluruh ruang kelas dilengkapi perangkat multimedia untuk mendukung pembelajaran interaktif.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-mosque"></i></div>
+                        <div>
+                            <h4>Pembinaan Budi Pekerti & Religius</h4>
+                            <p>Pembiasaan positif seperti Shalat Dhuha berjamaah untuk membentuk kedisiplinan siswa.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-flag"></i></div>
+                        <div>
+                            <h4>Wawasan 4 Pilar Kebangsaan</h4>
+                            <p>Menanamkan nilai Pancasila, UUD 1945, NKRI, dan Bhinneka Tunggal Ika dalam kehidupan sekolah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-box">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" 
+                     alt="Gedung Sekolah SMK Bangun Nusa Bangsa" class="card-top-img">
+                <div class="card-content">
+                    <h3>Identitas Sekolah</h3>
+                    <ul class="info-table">
+                        <li><span>Nama Resmi</span><strong>SMK Bangun Nusa Bangsa</strong></li>
+                        <li><span>Akreditasi</span><strong style="color: #16A34A;">A (Nilai 94)</strong></li>
+                        <li><span>Alamat</span><strong>Jl. Roda Pembangunan No.45, Karadenan, Cibinong, Kab. Bogor 16913</strong></li>
+                        <li><span>Telepon</span><strong>(0251) 7555982</strong></li>
+                        <li><span>Email</span><strong>smkbnb13@gmail.com</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Keahlian (3 Jurusan Unggulan) -->
+    <section id="jurusan" class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Kompetensi Keahlian</span>
+                <h2 class="section-title">3 Jurusan Siap Kerja & Berdaya Saing</h2>
+                <p class="section-desc mx-auto">Pilih program keahlian yang sesuai dengan minat dan bakatmu untuk masa depan karier yang gemilang.</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Jurusan 1: Akuntansi -->
+                <div class="jurusan-card">
+                    <div class="jurusan-img">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Akuntansi dan Keuangan">
+                        <span class="jurusan-icon"><i class="fas fa-calculator"></i></span>
+                    </div>
+                    <div class="jurusan-body">
+                        <h3>Akuntansi dan Keuangan (AK)</h3>
+                        <p>Mempersiapkan tenaga profesional di bidang pembukuan, pengelolaan keuangan perusahaan, perpajakan, serta aplikasi akuntansi komputer tingkat nasional.</p>
+                        <span class="tag-prospek">Prospek: Staf Keuangan, Akuntan Junior, Admin Bank</span>
+                    </div>
+                </div>
+
+                <!-- Jurusan 2: TKJ -->
+                <div class="jurusan-card">
+                    <div class="jurusan-img">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Teknik Komputer dan Jaringan">
+                        <span class="jurusan-icon"><i class="fas fa-network-wired"></i></span>
+                    </div>
+                    <div class="jurusan-body">
+                        <h3>Teknik Komputer dan Jaringan (TKJ)</h3>
+                        <p>Fokus pada perancangan infrastruktur jaringan, administrasi server, perakitan perangkat keras (hardware), troubleshooting, dan teknologi informasi terkini.</p>
+                        <span class="tag-prospek">Prospek: Network Engineer, IT Support, Teknisi Jaringan</span>
+                    </div>
+                </div>
+
+                <!-- Jurusan 3: TKR -->
+                <div class="jurusan-card">
+                    <div class="jurusan-img">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Teknik Kendaraan Ringan">
+                        <span class="jurusan-icon"><i class="fas fa-car-battery"></i></span>
+                    </div>
+                    <div class="jurusan-body">
+                        <h3>Teknik Kendaraan Ringan (TKR)</h3>
+                        <p>Membekali siswa dengan keahlian perawatan berkala, diagnosa kerusakan mesin, kelistrikan otomotif, dan praktik bengkel berstandar industri otomotif.</p>
+                        <span class="tag-prospek">Prospek: Mekanik Otomotif, Teknisi Dealer, Wirausaha Bengkel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas & Kegiatan Unggulan -->
+    <section id="fasilitas" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Lingkungan Belajar</span>
+                <h2 class="section-title">Fasilitas & Kegiatan Siswa</h2>
+            </div>
+
+            <div class="grid-2">
+                <div class="card-box">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+                         alt="Fasilitas Kelas TIK" class="card-top-img">
+                    <div class="card-content">
+                        <h3><i class="fas fa-building text-gold"></i> Fasilitas Penunjang KBM</h3>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check-circle"></i> Ruang kelas nyaman berbasis TIK (LCD TV / Proyektor)</li>
+                            <li><i class="fas fa-check-circle"></i> Bengkel Praktik Otomotif TKR berstandar industri</li>
+                            <li><i class="fas fa-check-circle"></i> Laboratorium Komputer & Praktik Akuntansi modern</li>
+                            <li><i class="fas fa-check-circle"></i> Area parkir kendaraan yang luas di dalam sekolah</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" 
+                         alt="Kegiatan Siswa SMK BNB" class="card-top-img">
+                    <div class="card-content">
+                        <h3><i class="fas fa-trophy text-gold"></i> Kegiatan & Ekstrakurikuler</h3>
+                        <ul class="check-list">
+                            <li><i class="fas fa-star text-gold"></i> <strong>Kunjungan Industri & Study Tour:</strong> Agenda tahunan mengenal dunia kerja</li>
+                            <li><i class="fas fa-star text-gold"></i> <strong>Festival & Kontes Motor BNB:</strong> Ajang kreativitas otomotif siswa</li>
+                            <li><i class="fas fa-star text-gold"></i> <strong>Ekstrakurikuler:</strong> Futsal, Pramuka, Paskibra, dan pengembangan minat bakat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner PPDB -->
+    <section class="ppdb-section">
+        <div class="container">
+            <div class="ppdb-banner">
+                <div>
+                    <span class="ppdb-tag">Penerimaan Peserta Didik Baru</span>
+                    <h2>Siap Bergabung Bersama SMK Bangun Nusa Bangsa?</h2>
+                    <p>Pendaftaran dibuka untuk lulusan SMP/MTs sederajat. Daftarkan dirimu secara online melalui portal ini atau datang langsung ke kampus SMK BNB Cibinong.</p>
+                </div>
+                <div class="ppdb-actions">
+                    <button onclick="openModal()" class="btn btn-gold">Isi Formulir PPDB</button>
+                    <a href="tel:02517555982" class="btn btn-outline-white"><i class="fas fa-phone-alt"></i> Hubungi Panitia</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Peta Lokasi -->
+    <footer id="kontak">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo" style="margin-bottom: 16px;">
+                    <div class="logo-box" style="background: var(--gold); color: var(--navy);">BNB</div>
+                    <div class="logo-text">
+                        <strong style="color: #fff;">SMK Bangun Nusa Bangsa</strong>
+                        <span style="color: #9CA3AF;">Cibinong - Kab. Bogor</span>
+                    </div>
+                </div>
+                <p style="font-size: 0.88rem; color: #9CA3AF;">Mencetak lulusan kompeten, disiplin, siap kerja, dan berakhlak mulia di wilayah Cibinong, Kabupaten Bogor.</p>
+            </div>
+
+            <div>
+                <h4>Tautan Cepat</h4>
+                <ul class="footer-links">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#profil">Profil Sekolah</a></li>
+                    <li><a href="#jurusan">Kompetensi Keahlian</a></li>
+                    <li><a href="#fasilitas">Fasilitas & Kegiatan</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Kontak & Operasional</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Jl. Roda Pembangunan No.45, RT.02/RW.07, Karadenan, Cibinong, Kab. Bogor 16913</li>
+                    <li><i class="fas fa-phone-alt"></i> (0251) 7555982</li>
+                    <li><i class="fas fa-envelope"></i> smkbnb13@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Senin-Jumat: 07.00 - 17.00 WIB<br>Sabtu: 07.00 - 14.00 WIB</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Lokasi Sekolah</h4>
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps?q=SMK+Bangun+Nusa+Bangsa+Cibinong&output=embed" 
+                            width="100%" height="160" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 SMK Bangun Nusa Bangsa Cibinong. Hak Cipta Dilindungi Undang-Undang.
+        </div>
+    </footer>
+
+    <!-- Modal Formulir Pendaftaran PPDB -->
+    <div id="ppdb-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Formulir Pendaftaran PPDB Online</h3>
+                <button onclick="closeModal()" class="close-btn">&times;</button>
+            </div>
+            <form id="ppdb-form" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label>Nama Lengkap Calon Siswa</label>
+                    <input type="text" required placeholder="Masukkan nama lengkap sesuai ijazah">
+                </div>
+                <div class="form-group">
+                    <label>Asal Sekolah (SMP / MTs)</label>
+                    <input type="text" required placeholder="Contoh: SMPN 1 Cibinong">
+                </div>
+                <div class="form-group">
+                    <label>Pilihan Kompetensi Keahlian</label>
+                    <select required>
+                        <option value="">-- Pilih Jurusan --</option>
+                        <option value="AK">Akuntansi dan Keuangan (AK)</option>
+                        <option value="TKJ">Teknik Komputer dan Jaringan (TKJ)</option>
+                        <option value="TKR">Teknik Kendaraan Ringan (TKR)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Nomor WhatsApp Aktif</label>
+                    <input type="tel" required placeholder="Contoh: 081234567890">
+                </div>
+                <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 8px;">Kirim Pendaftaran</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Sederhana untuk Menu Mobile & Modal -->
+    <script>
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const modal = document.getElementById('ppdb-modal');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        function openModal() {
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        function submitForm(e) {
+            e.preventDefault();
+            alert('Terima kasih! Data pendaftaran PPDB Anda telah diterima. Panitia SMK Bangun Nusa Bangsa akan segera menghubungi Anda melalui WhatsApp.');
+            document.getElementById('ppdb-form').reset();
+            closeModal();
+        }
+    </script>
+</body>
+</html>
