@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portofolio Levi, pelajar SMK Bangun Nusa Bangsa yang tertarik pada jaringan, server, dan keamanan siber etis.">
+  <title>Levi — Jaringan &amp; Keamanan Siber</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d12;
+      --panel: #101820;
+      --text: #eef5f7;
+      --muted: #9aaab2;
+      --mint: #73f5c2;
+      --line: rgba(190, 218, 223, .14);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    header {
+      position: absolute;
+      z-index: 2;
+      inset: 0 0 auto;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .brand span { color: var(--mint); }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      color: #d3dfe2;
+      font-size: .9rem;
+    }
+
+    .nav-links a:hover, .text-link:hover { color: var(--mint); }
+
+    .hero {
+      min-height: 690px;
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(8,13,18,.98) 0%, rgba(8,13,18,.87) 43%, rgba(8,13,18,.25) 100%),
+        linear-gradient(0deg, var(--bg) 0%, transparent 28%),
+        url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2000&q=85") center 43% / cover;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding-top: 80px;
+      position: relative;
+    }
+
+    .eyebrow {
+      color: var(--mint);
+      font: 700 .78rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: 18px 0;
+      font-size: clamp(3rem, 8vw, 6.1rem);
+      line-height: .98;
+      letter-spacing: -.075em;
+    }
+
+    h1 span { color: var(--mint); }
+
+    .hero p {
+      max-width: 570px;
+      margin: 0;
+      color: #c0cdd1;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      border: 1px solid var(--mint);
+      border-radius: 6px;
+      background: var(--mint);
+      color: #07120e;
+      font-weight: 750;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); background: #98ffd8; }
+
+    .button.secondary {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(8,13,18,.45);
+    }
+
+    .button.secondary:hover { border-color: var(--mint); }
+
+    section { padding: 92px 0; }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      margin: 8px 0 12px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -.06em;
+    }
+
+    .section-heading p, .about-copy p { color: var(--muted); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: clamp(34px, 8vw, 90px);
+    }
+
+    .photo-card {
+      min-height: 390px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #121b22;
+    }
+
+    .photo-card img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      object-fit: cover;
+      opacity: 1;
+    }
+
+    .photo-label {
+      position: absolute;
+      inset: auto 16px 16px;
+      padding: 10px 13px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 6px;
+      background: rgba(8,13,18,.76);
+      color: #d4e0e3;
+      font-size: .8rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .about-copy .school {
+      display: inline-block;
+      margin: 8px 0 14px;
+      color: var(--mint);
+      font-weight: 650;
+    }
+
+    .skills { background: #0c1218; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 205px;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: var(--panel);
+    }
+
+    .card .number {
+      color: var(--mint);
+      font: 700 .8rem ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .card h3 { margin: 20px 0 8px; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .93rem; }
+
+    .ethics {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+      padding: 34px;
+      border: 1px solid rgba(115,245,194,.25);
+      border-radius: 10px;
+      background: linear-gradient(120deg, rgba(115,245,194,.09), rgba(16,24,32,.65));
+    }
+
+    .ethics h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
+    .ethics p { max-width: 670px; margin-bottom: 0; color: var(--muted); }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .hero { min-height: 650px; background-position: 58% center; }
+      .nav-links { gap: 14px; font-size: .8rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .photo-card { min-height: 300px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .ethics { grid-template-columns: 1fr; padding: 25px; }
+    }
+
+    @media (max-width: 440px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      .nav-links { gap: 11px; }
+      .nav-links a { font-size: .74rem; }
+      .brand { font-size: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda">LEVI<span>.</span></a>
+      <div class="nav-links">
+        <a href="#tentang">Tentang</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#etika">Prinsip</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="wrap">
+        <div class="hero-content">
+          <div class="eyebrow">Jaringan · Server · Cybersecurity</div>
+          <h1>Membangun sistem.<br><span>Menjaganya.</span></h1>
+          <p>Halo, saya Levi — pelajar yang bersemangat mendalami jaringan komputer, administrasi server, dan keamanan siber secara bertanggung jawab.</p>
+          <div class="actions">
+            <a class="button" href="#tentang">Kenali Levi</a>
+            <a class="button secondary" href="#keahlian">Lihat keahlian</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="wrap about-grid">
+        <div class="photo-card">
+          <img
+            src="lepi.jpeg"
+            alt="Foto Levi"
+            loading="lazy">
+          <div class="photo-label">Levi · SMK Bangun Nusa Bangsa</div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Tentang saya</div>
+          <h2>Rasa ingin tahu, jadi keahlian.</h2>
+          <span class="school">SMK Bangun Nusa Bangsa</span>
+          <p>Saya Levi, siswa yang menyukai cara kerja jaringan dan server di balik layanan digital. Saya terus mengembangkan kemampuan melalui praktik, eksplorasi teknologi, dan pembelajaran yang terarah.</p>
+          <p>Ketertarikan saya mencakup konfigurasi jaringan, pengelolaan server, Linux, serta pengujian keamanan pada sistem yang memang diizinkan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="keahlian">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Bidang yang saya tekuni</div>
+          <h2>Teknologi yang saya pelajari.</h2>
+          <p>Fondasi teknis untuk memahami, mengelola, dan membantu menjaga sistem digital.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="number">01 / NETWORKING</div>
+            <h3>Jaringan komputer</h3>
+            <p>Topologi, pengalamatan IP, routing, switching, dan pemecahan masalah konektivitas.</p>
+          </article>
+          <article class="card">
+            <div class="number">02 / SYSTEMS</div>
+            <h3>Server &amp; Linux</h3>
+            <p>Dasar administrasi server, layanan jaringan, konfigurasi, dan pemantauan sistem.</p>
+          </article>
+          <article class="card">
+            <div class="number">03 / SECURITY</div>
+            <h3>Keamanan siber etis</h3>
+            <p>Belajar mengenali risiko dan menguji keamanan hanya di lab atau dengan izin yang jelas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="etika">
+      <div class="wrap ethics">
+        <div>
+          <div class="eyebrow">Prinsip utama</div>
+          <h2>Keahlian selalu disertai tanggung jawab.</h2>
+          <p>Keamanan siber yang baik melindungi orang dan sistem. Semua latihan dilakukan secara legal, pada lingkungan sendiri, lab pembelajaran, atau dengan izin eksplisit.</p>
+        </div>
+        <a class="button secondary" href="#beranda">Kembali ke atas ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Levi</span>
+      <span>Dibuat dengan semangat belajar dan etika digital.</span>
+    </div>
+  </footer>
+</body>
+</html>
